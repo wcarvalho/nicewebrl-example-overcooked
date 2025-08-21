@@ -10,17 +10,22 @@ This example demonstrates how to create a multi-agent web interface for the [Jax
 - Multiple layouts available
 - Real-time interaction between two human players
 
-## Running the Example
-**Make sure you have CMake installed**
-```bash
-# Install dependencies
-pip install "git+https://github.com/wcarvalho/nicewebrl.git#egg=nicewebrl[jaxmarl]"
-# or 
-pip install -e ".[jaxmarl]"
+## Installation
 
+**Make sure you have CMake installed**
+
+```bash
+# Install uv if you haven't already
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Install dependencies
+uv sync
+```
+
+## Running the Example
+```bash
 # Run the web app
-cd examples/overcooked
-python web_app.py
+uv run python web_app.py
 ```
 
 Note: This example requires two players to connect to play together. 
